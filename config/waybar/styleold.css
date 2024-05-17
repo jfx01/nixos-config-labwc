@@ -1,0 +1,111 @@
+* {
+	font-size: 15px;
+	font-family: unifont;
+    	padding: 0;
+    	margin: 0;
+}
+
+window#waybar {
+	background: #292b2e;
+	color: #fdf6e3;
+        border: solid 1px gray;
+}
+
+#custom-launcher-1,
+#custom-launcher-2,
+#custom-launcher-3,
+#custom-launcher-4 {
+	padding: 3;
+	border: solid 0.5px black;
+}
+
+#custom-zypper {
+	color: #4c9141;
+}
+
+#clock.1,
+#clock.2,
+#clock.3 {
+	font-size: 20px;
+}
+
+#workspaces,
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk.1,
+#disk.2,
+#tray {
+	background: #1a1a1a;
+	border: solid 1px gray;
+}
+
+#workspaces button {
+	padding: 0 2px;
+	color: #fdf6e3;
+}
+#workspaces button.focused {
+	color: #268bd2;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+#workspaces button:hover {
+	background: #1a1a1a;
+	border: #1a1a1a;
+	padding: 0 3px;
+}
+
+#pulseaudio {
+	color: #ffffff;
+}
+#memory {
+	color: #ffffff;
+}
+#cpu {
+	color: #ffffff;
+}
+#battery {
+	color: #ffffff;
+}
+#disk.1 {
+	color: #ffffff;
+}
+#disk.2 {
+	color: #ffffff;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk.1
+#disk.2 {
+	padding: 0 2px;
+}
+
+#taskbar {
+    padding: 0 0 0;
+    border: solid 1px gray;
+    background: #1a1a1a;
+}
+
+#taskbar button {
+    padding: 0 5 0;
+    border:  none;
+    background: #1a1a1a;
+}
+
+#taskbar button.active {
+    background: gray;
+}
+
+#tray {
+    padding: 0 5 0;
+}

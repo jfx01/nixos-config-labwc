@@ -1,0 +1,89 @@
+conky.config = {
+--==============================================================================
+-- Nome: Karen com fundo (Não funciona no i3wm)
+--
+-- Fonte Roboto Regular com Roboto Mono | Com fundo feito usando background = true | Calendário mais espaçado usando 5 linhas de código
+--
+-- Versão: 180324
+--
+-- Tema criado dia 18/03/2024
+--
+-- Última atualização 18/03/2024
+--
+-- Temperatura: Celcius
+--
+-- Criado em um monitor com a resolução 1920x1080
+--
+-- Baseado nos temas: Rastaban, Arrakis, Botein, Eltanin, Mimosa, SimpleC-one e SystemMon4Core
+--
+-- Documentação conky >>> https://conky.cc/config_settings 
+--
+-- Wiki útil com exemplos >> https://github.com/brndnmtthws/conky/wiki/Configs
+--
+-- Anotações úteis:
+--
+-- Comando para descobrir fontes e variações >>> fc-list | grep -i "Nerd" descobrir fonte
+--
+-- Calendario versão 1 >>> ${offset 40}${voffset 15}${color}${font Roboto:Regular:size=9}${execi 5 cat ~/01.txt | sed '3d' | sed '2d' | sed '1d'}${font} 
+--
+-- Para funcionar o calendário via comando precisa ser uma fonte mono >> -- ${font Liberarion Mono:size=9}${execpi 1800 DA=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DA"'\b'/'\1${color orange}'"$DA"'$color'/}
+--==============================================================================
+
+-- Size and Position settings --
+  alignment = 'top_right',
+  gap_x = 50,
+  gap_y = 50,
+  maximum_width = 350,
+  minimum_width = 250,
+  
+-- Text settings --
+  use_xft = true,
+  override_utf8_locale = true,
+  font = 'Roboto:Regular:size=9',
+  
+-- Color Settings --
+  default_color = 'white',
+  default_outline_color = 'white',
+  default_shade_color = 'white',
+  color2 = '#86be43',
+  
+-- Window Settings --
+  background = yes,
+  border_width = 20,
+  draw_borders = false,
+  draw_graph_borders = true,
+  draw_outline = false,
+  draw_shades = false,
+  own_window = true,
+  own_window_colour = '#1a1a1a',
+  own_window_class = 'Conky',
+  own_window_title = 'Conky',
+  own_window_type = 'desktop',
+  own_window_transparent = false,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  stippled_borders = 0,
+
+-- Window transparent --
+  own_window_argb_visual = true,
+  own_window_argb_value = 0,  
+ 
+-- Others --
+  cpu_avg_samples = 2,
+  net_avg_samples = 2,
+  double_buffer = true,
+  out_to_console = false,
+  out_to_stderr = false,
+  extra_newline = false,
+  update_interval = 1,
+  uppercase = false,
+  use_spacer = 'none',
+  short_units = true,
+  show_graph_scale = false,
+  show_graph_range = false,
+}
+
+conky.text = [[
+${alignc}${font Bebas Neue:size=60}${time %H:%M}${font}
+${alignc}${voffset 15}${font Roboto:light:size=15}${time %A, %d %B}
+${alignc}${font Roboto:Medium:size=11}  Uptime ${uptime}
+]]
